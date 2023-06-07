@@ -10,7 +10,7 @@ app.appendChild(logo);
 app.appendChild(container);
 
 var request = new XMLHttpRequest();
-request.open('GET', 'https://v.api.aa1.cn/api/yiyan/index.php', true);
+request.open('GET', 'https://v.api.aa1.cn/api/qqjson/index.php?qq=15001904', true);
 request.onload = function () {
 
   // Begin accessing JSON data here
