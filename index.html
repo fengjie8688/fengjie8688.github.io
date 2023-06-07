@@ -1,18 +1,13 @@
----
-layout: default
----
+<script> 
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+$.ajax({
+url:"https://v.api.aa1.cn/api/yiyan/index.php",//服务器api地址
+type:get,
+dataType:"jsonp",
+success:function(data){
+//data就是远程获取下来的数据
+console.log(data);
+}
+});
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+</script>
